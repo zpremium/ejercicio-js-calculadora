@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULADORA</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(#141e30, #243b55);
+      }
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+      }
+      div h1 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+      select {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri",
+          "Arial", sans-serif;
+        font-size: 18px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      button {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        left: 20%;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      button:hover {
+        color: #fff;
+        border-radius: 5px;
+      }
+      p {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CALCULAR</h1>
+      <input type="number" placeholder="Primer valor" name="num1" id="num1" />
+      <br />
+      <input type="number" placeholder="Segundo valor" name="num2" id="num2" />
+      <br />
+      <select name="op" id="op">
+        <option value="multiplicar">multiplicar</option>
+        <option value="dividir">dividir</option>
+        <option value="sumar">sumar</option>
+        <option value="restar">restar</option>
+      </select>
+      <br />
+      <button id="button">Resultado</button>
+      <p id="resultado"></p>
+    </div>
+    <script src="calculadora.js"></script>
+  </body>
 </html>
